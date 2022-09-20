@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/style.css">
+
+        <title>Fake E-commerce</title>
+    </head>
+    <body >
+        <header>
+            <nav class="navbar navbar-expand-lg bg-light navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">Fake E-commerce</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link " href="#" aria-current="page" onclick="renderCategoryProducts(electronics)">Electronics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="renderCategoryProducts(jewelery)">Jewelery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="renderCategoryProducts(men)">Men's clothing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="renderCategoryProducts(women)">Women's clothing</a>
+                            </li>
+                        </ul>
+                        <span class="navbar-text">
+                            <div class="cartInitContainer">
+                                <a href="./pages/cart.html"><i class="fa-solid fa-cart-shopping cartLogo fa-xl"></i></a>
+                                <div class="cartNumberContainer">
+                                    <p class="cartNumber"></p>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="loadingLayout">
+                <div class="d-flex justify-content-center spinnerContainer" id="spinner">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="initLayout">
+                <div class="heroContainer">
+                </div>
+                <div class="categoriesContainer">
+                    <div class="card" style="width: 18rem;">
+                        <div class="imgCategoriesContainer">
+                            <img src="./assets/images/electronic.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Electronics</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button name="electronics" href="#" class="btn btn-primary btnCategories">Show products</button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="imgCategoriesContainer">
+                            <img src="./assets/images/jewlery.jpg" class="card-img-top" alt="...">    
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Jewelery</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button name="jewelery" href="#" class="btn btn-primary btnCategories">Show products</button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="imgCategoriesContainer">
+                            <img src="./assets/images/man.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Men's clothing</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button name="men" href="#" class="btn btn-primary btnCategories">Show products</button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="imgCategoriesContainer">
+                            <img src="./assets/images/woman.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Women's clothing</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button name="women" href="#" class="btn btn-primary btnCategories">Show products</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="categoryRenderContainer">
+            </div>
+            <div class="modalContainer">
+            </div>
+        </main>
+        <footer>
+            <div class="footerContentContainer">
+                <p>Copyright</p>
+                <i class="fa-solid fa-2xl fa-copyright"></i>
+                <p>Patricio Neri García</p>
+            </div>
+        </footer>
+        <script src="https://kit.fontawesome.com/256abd459f.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
+
